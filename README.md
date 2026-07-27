@@ -1159,13 +1159,6 @@ Management Reports
 
 ---
 
-# 📸 Screenshots & Verification
-
-The repository contains execution evidence demonstrating successful implementation of every development phase.
-
-All screenshots are organized by project phase for easy verification.
-
----
 
 ## Verification Gallery
 
@@ -1214,7 +1207,7 @@ Before running the project, ensure the following software is installed:
 
 | Software | Version |
 |----------|---------|
-| Oracle Database | 19c / Oracle XE |
+| Oracle Database | 21c / Oracle XE |
 | Oracle SQL Developer | Latest Version |
 | Microsoft Power BI Desktop | Latest Version (Optional) |
 | Git | Latest Version |
@@ -1497,7 +1490,6 @@ This repository was developed as an academic capstone project for:
 **DPR400210 – Database Programming with Oracle Database**
 
 at the
-
 **University of Lay Adventists of Kigali (UNILAK)**
 
 The project is submitted for educational and academic evaluation purposes. It may be referenced for learning and demonstration, but should not be submitted as original work by other students.
@@ -1552,8 +1544,4 @@ I would like to express my sincere appreciation to:
 
 ---
 
-### ⭐ Thank you for visiting this repository!
 
-*This project demonstrates the practical application of Oracle Database technologies to design, implement, secure, and analyze a modern retail e-commerce database system using industry-standard database programming techniques.*
-
-</div>
