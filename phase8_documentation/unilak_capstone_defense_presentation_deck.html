@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UNILAK Capstone Defense - Enterprise Oracle Database</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .slide { display: none; }
+        .slide.active { display: flex; }
+    </style>
+</head>
+<body class="bg-slate-900 text-slate-100 font-sans h-screen flex flex-col justify-between overflow-hidden">
+
+    <!-- Top Header -->
+    <header class="bg-slate-800 border-b border-slate-700 px-6 py-4 flex justify-between items-center">
+        <div class="flex items-center space-x-3">
+            <span class="bg-red-600 text-white font-bold px-3 py-1 rounded text-xs tracking-wider uppercase">UNILAK</span>
+            <h1 class="text-lg font-semibold text-slate-200">Faculty of Computing & Information Sciences</h1>
+        </div>
+        <div class="text-sm text-slate-400">
+            <span id="current-slide-num">1</span> / <span id="total-slides-num">10</span>
+        </div>
+    </header>
+
+    <!-- Main Slide Container -->
+    <main class="flex-1 relative flex items-center justify-center p-8 overflow-y-auto">
+
+        <!-- SLIDE 1 -->
+        <section class="slide active flex-col items-center justify-center text-center max-w-4xl w-full">
+            <div class="inline-block p-4 bg-red-600/10 border border-red-500/20 rounded-full mb-6 text-red-500 text-3xl">
+                <i class="fa-solid fa-database"></i>
+            </div>
+            <h1 class="text-4xl md:text-5xl font-extrabold text-white tracking-tight mb-4">
+                Enterprise E-Commerce Database Architecture
+            </h1>
+            <p class="text-xl text-slate-300 mb-8 max-w-2xl">
+                Advanced Oracle PL/SQL Security Engine, Autonomous Audit Logging & Power BI Business Intelligence Analytics
+            </p>
+            <div class="bg-slate-800/80 border border-slate-700 rounded-xl p-6 w-full max-w-xl text-left grid grid-cols-2 gap-4 text-sm">
+                <div>
+                    <p class="text-slate-400">Presenter</p>
+                    <p class="font-semibold text-slate-200">Izihirwe-Majibu-Amicus</p>
+                </div>
+                <div>
+                    <p class="text-slate-400">Institution</p>
+                    <p class="font-semibold text-slate-200">UNILAK (Nyanza Campus)</p>
+                </div>
+                <div>
+                    <p class="text-slate-400">Core Stack</p>
+                    <p class="font-semibold text-red-400">Oracle 21c XE / PL/SQL</p>
+                </div>
+                <div>
+                    <p class="text-slate-400">Analytics Layer</p>
+                    <p class="font-semibold text-amber-400">Power BI Desktop</p>
+                </div>
+            </div>
+            <div class="speaker-note hidden mt-6 p-4 bg-amber-950/40 border border-amber-500/30 text-amber-200 text-sm rounded-lg text-left w-full">
+                <strong>💡 Speaker Notes:</strong> Good morning/afternoon panel. My name is Izihirwe-Majibu-Amicus. Today I present my capstone database architecture: an autonomous, hardened E-Commerce Database System built on Oracle 21c XE and integrated with Power BI analytics.
+            </div>
+        </section>
+
+        <!-- SLIDE 2 -->
+        <section class="slide flex-col max-w-5xl w-full">
+            <h2 class="text-3xl font-bold text-white mb-2">Problem Statement & Architectural Objectives</h2>
+            <p class="text-slate-400 mb-6">Transitioning from vulnerable app-level logic to database-enforced integrity.</p>
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="bg-slate-800 border border-red-500/30 p-6 rounded-xl">
+                    <h3 class="text-lg font-bold text-red-400 mb-3 flex items-center"><i class="fa-solid fa-triangle-exclamation mr-2"></i> System Vulnerabilities</h3>
+                    <ul class="space-y-3 text-slate-300 text-sm">
+                        <li class="flex items-start"><i class="fa-solid fa-xmark text-red-500 mt-1 mr-2"></i> Unmonitored off-hours Data Manipulation Language (DML) queries.</li>
+                        <li class="flex items-start"><i class="fa-solid fa-xmark text-red-500 mt-1 mr-2"></i> Inventory overselling during concurrent multi-item customer checkouts.</li>
+                        <li class="flex items-start"><i class="fa-solid fa-xmark text-red-500 mt-1 mr-2"></i> Audit trail loss when parent transactions suffer explicit rollbacks.</li>
+                    </ul>
+                </div>
+                <div class="bg-slate-800 border border-emerald-500/30 p-6 rounded-xl">
+                    <h3 class="text-lg font-bold text-emerald-400 mb-3 flex items-center"><i class="fa-solid fa-shield-halved mr-2"></i> Database Engine Solutions</h3>
+                    <ul class="space-y-3 text-slate-300 text-sm">
+                        <li class="flex items-start"><i class="fa-solid fa-check text-emerald-400 mt-1 mr-2"></i> <strong>PL/SQL Encapsulation:</strong> Atomic order handling via <code>ECOMM_ORDER_PKG</code>.</li>
+                        <li class="flex items-start"><i class="fa-solid fa-check text-emerald-400 mt-1 mr-2"></i> <strong>Time-Window Policy:</strong> Strict DML operational windows (08:00 - 18:00).</li>
+                        <li class="flex items-start"><i class="fa-solid fa-check text-emerald-400 mt-1 mr-2"></i> <strong>Autonomous Logging:</strong> Independent <code>PRAGMA AUTONOMOUS_TRANSACTION</code> commits.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="speaker-note hidden mt-6 p-4 bg-amber-950/40 border border-amber-500/30 text-amber-200 text-sm rounded-lg">
+                <strong>💡 Speaker Notes:</strong> Traditional client applications fail when direct DB connections occur. We pushed security, validation, and logging directly into the Oracle engine so policies are enforced regardless of the client application.
+            </div>
+        </section>
+
+        <!-- SLIDE 3 -->
+        <section class="slide flex-col max-w-5xl w-full">
+            <h2 class="text-3xl font-bold text-white mb-2">Relational Data Model & Schema Design</h2>
+            <p class="text-slate-400 mb-6">Normalized 3NF schema engineered for concurrency and data protection.</p>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
+                <div class="bg-slate-800 p-4 rounded-lg border border-slate-700">
+                    <p class="text-xs text-slate-400 uppercase font-bold">Core Tables</p>
+                    <p class="text-xl font-bold text-blue-400 mt-1">7 Tables</p>
+                    <p class="text-xs text-slate-500 mt-1">Normalized to 3NF</p>
+                </div>
+                <div class="bg-slate-800 p-4 rounded-lg border border-slate-700">
+                    <p class="text-xs text-slate-400 uppercase font-bold">Primary Keys</p>
+                    <p class="text-xl font-bold text-emerald-400 mt-1">Sequences</p>
+                    <p class="text-xs text-slate-500 mt-1"><code>SEQ_AUDIT_LOG</code>, etc.</p>
+                </div>
+                <div class="bg-slate-800 p-4 rounded-lg border border-slate-700">
+                    <p class="text-xs text-slate-400 uppercase font-bold">Integrity</p>
+                    <p class="text-xl font-bold text-purple-400 mt-1">FK Constraints</p>
+                    <p class="text-xs text-slate-500 mt-1">Indexed foreign keys</p>
+                </div>
+                <div class="bg-slate-800 p-4 rounded-lg border border-slate-700">
+                    <p class="text-xs text-slate-400 uppercase font-bold">Audit Storage</p>
+                    <p class="text-xl font-bold text-amber-400 mt-1">CLOB Tracing</p>
+                    <p class="text-xs text-slate-500 mt-1">Old vs. New values</p>
+                </div>
+            </div>
+            <div class="bg-slate-800 border border-slate-700 rounded-xl p-4 text-xs font-mono text-slate-300">
+                CUSTOMERS (customer_id) ──< ORDERS (order_id) ──< ORDER_ITEMS (item_id) >── PRODUCTS (product_id) <── INVENTORY (product_id)<br>
+                ORDERS (order_id) ──< PAYMENTS (payment_id)<br>
+                AUDIT_LOG (audit_id, table_name, operation_type, db_username, action_status, action_timestamp)
+            </div>
+            <div class="speaker-note hidden mt-6 p-4 bg-amber-950/40 border border-amber-500/30 text-amber-200 text-sm rounded-lg">
+                <strong>💡 Speaker Notes:</strong> The schema enforces Third Normal Form. All primary and foreign keys are explicitly defined with surrogate sequence generators and supporting indices to support rapid joins.
+            </div>
+        </section>
+
+        <!-- SLIDE 4 -->
+        <section class="slide flex-col max-w-5xl w-full">
+            <h2 class="text-3xl font-bold text-white mb-2">Autonomous Security Engine (ECOMM_SECURITY_PKG)</h2>
+            <p class="text-slate-400 mb-6">Time-window policy enforcement and non-repudiable audit logging.</p>
+            <div class="bg-slate-800 border border-slate-700 rounded-xl p-6 grid md:grid-cols-2 gap-6">
+                <div>
+                    <h3 class="text-md font-bold text-red-400 mb-2">Policy Execution Flow</h3>
+                    <ol class="space-y-2 text-xs text-slate-300 list-decimal list-inside">
+                        <li>DML Trigger intercepts <code>INSERT / UPDATE / DELETE</code>.</li>
+                        <li>Invokes <code>check_dml_window(p_table, p_action)</code>.</li>
+                        <li>Evaluates system time against operational hours (08:00–18:00, Mon-Fri).</li>
+                        <li>If non-admin & outside window: Raises <code>ORA-20001</code> error.</li>
+                        <li>Invokes <code>log_audit_event</code> autonomously.</li>
+                    </ol>
+                </div>
+                <div class="bg-slate-900 p-4 rounded-lg border border-slate-700 text-xs font-mono text-emerald-400 overflow-x-auto">
+                    <span class="text-slate-500">-- Key Autonomous Transaction Block</span><br>
+                    PROCEDURE log_audit_event(...) IS<br>
+                    &nbsp;&nbsp;<strong>PRAGMA AUTONOMOUS_TRANSACTION;</strong><br>
+                    BEGIN<br>
+                    &nbsp;&nbsp;INSERT INTO AUDIT_LOG (...) VALUES (...);<br>
+                    &nbsp;&nbsp;<strong>COMMIT;</strong> <span class="text-slate-500">-- Independent commit!</span><br>
+                    EXCEPTION<br>
+                    &nbsp;&nbsp;WHEN OTHERS THEN ROLLBACK; RAISE;<br>
+                    END log_audit_event;
+                </div>
+            </div>
+            <div class="speaker-note hidden mt-6 p-4 bg-amber-950/40 border border-amber-500/30 text-amber-200 text-sm rounded-lg">
+                <strong>💡 Speaker Notes:</strong> PRAGMA AUTONOMOUS_TRANSACTION is crucial. Even if an unauthorized query triggers a rollback, the security denial record is independently committed to AUDIT_LOG.
+            </div>
+        </section>
+
+        <!-- SLIDE 5 -->
+        <section class="slide flex-col max-w-5xl w-full">
+            <h2 class="text-3xl font-bold text-white mb-2">Transactional Order Processing (ECOMM_ORDER_PKG)</h2>
+            <p class="text-slate-400 mb-6">Guaranteeing ACID compliance during complex multi-table checkouts.</p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div class="bg-slate-800 p-5 rounded-xl border border-slate-700">
+                    <div class="text-blue-400 text-2xl mb-2"><i class="fa-solid fa-1"></i></div>
+                    <h3 class="font-bold text-slate-200 text-sm mb-1">Validation & Pricing</h3>
+                    <p class="text-xs text-slate-400">Verifies customer existence, product unit price, and verifies stock availability in <code>INVENTORY</code>.</p>
+                </div>
+                <div class="bg-slate-800 p-5 rounded-xl border border-slate-700">
+                    <div class="text-purple-400 text-2xl mb-2"><i class="fa-solid fa-2"></i></div>
+                    <h3 class="font-bold text-slate-200 text-sm mb-1">Atomic Mutation</h3>
+                    <p class="text-xs text-slate-400">Inserts master record into <code>ORDERS</code>, line items into <code>ORDER_ITEMS</code>, and decrements stock in <code>INVENTORY</code>.</p>
+                </div>
+                <div class="bg-slate-800 p-5 rounded-xl border border-slate-700">
+                    <div class="text-emerald-400 text-2xl mb-2"><i class="fa-solid fa-3"></i></div>
+                    <h3 class="font-bold text-slate-200 text-sm mb-1">Payment & Receipt</h3>
+                    <p class="text-xs text-slate-400">Generates transaction entry in <code>PAYMENTS</code> and returns the new <code>ORDER_ID</code> via OUT parameter.</p>
+                </div>
+            </div>
+            <div class="speaker-note hidden mt-6 p-4 bg-amber-950/40 border border-amber-500/30 text-amber-200 text-sm rounded-lg">
+                <strong>💡 Speaker Notes:</strong> By encapsulating checkout inside ECOMM_ORDER_PKG.place_order, we eliminate partial writes or dirty reads. Stock deductions and order creations either succeed completely or fail gracefully.
+            </div>
+        </section>
+
+        <!-- SLIDE 6 -->
+        <section class="slide flex-col max-w-5xl w-full">
+            <h2 class="text-3xl font-bold text-white mb-2">Multi-Tiered Database Triggers & Mutating Fix</h2>
+            <p class="text-slate-400 mb-6">Active data guarding and solving ORA-04091 mutating-table errors.</p>
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="bg-slate-800 p-5 rounded-xl border border-slate-700">
+                    <h3 class="font-bold text-amber-400 text-sm mb-3">Business Rule Triggers</h3>
+                    <ul class="text-xs text-slate-300 space-y-2">
+                        <li>• <code>TRG_PRODUCTS_PRICE_CHECK</code>: Rejects negative prices & max 80% single-update price drops.</li>
+                        <li>• <code>TRG_PAYMENTS_AMOUNT_CHECK</code>: Enforces positive payment thresholds.</li>
+                        <li>• <code>TRG_INVENTORY_NEGATIVE_CHECK</code>: Prevents negative physical inventory.</li>
+                    </ul>
+                </div>
+                <div class="bg-slate-800 p-5 rounded-xl border border-slate-700">
+                    <h3 class="font-bold text-blue-400 text-sm mb-3">Compound Trigger Architecture</h3>
+                    <p class="text-xs text-slate-300 mb-2"><code>TRG_INVENTORY_LOW_STOCK_COMPOUND</code> uses a 4-section compound structure:</p>
+                    <p class="text-xs text-slate-400 italic">Buffers low-stock rows during <code>AFTER EACH ROW</code> and commits audit alerts in <code>AFTER STATEMENT</code>, eliminating <strong>ORA-04091</strong>.</p>
+                </div>
+            </div>
+            <div class="speaker-note hidden mt-6 p-4 bg-amber-950/40 border border-amber-500/30 text-amber-200 text-sm rounded-lg">
+                <strong>💡 Speaker Notes:</strong> Standard row triggers fail with ORA-04091 when querying the table being updated. Our Compound Trigger buffers row changes in a PL/SQL collection and processes the security log after the DML statement finishes.
+            </div>
+        </section>
+
+        <!-- SLIDE 7 -->
+        <section class="slide flex-col max-w-5xl w-full">
+            <h2 class="text-3xl font-bold text-white mb-2">Power BI Integration & Analytical Views</h2>
+            <p class="text-slate-400 mb-6">Decoupled analytical abstraction layer for high-throughput reporting.</p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div class="bg-slate-800 p-5 rounded-xl border border-slate-700">
+                    <div class="text-amber-400 text-xl font-bold mb-1">VW_BI_SALES_OVERVIEW</div>
+                    <p class="text-xs text-slate-400">Pre-calculates total revenues, customer spend rankings, and monthly sales trends for Power BI charts.</p>
+                </div>
+                <div class="bg-slate-800 p-5 rounded-xl border border-slate-700">
+                    <div class="text-emerald-400 text-xl font-bold mb-1">VW_BI_INVENTORY_HEALTH</div>
+                    <p class="text-xs text-slate-400">Flags low-stock thresholds dynamically with <code>REORDER NEEDED</code> status badges.</p>
+                </div>
+                <div class="bg-slate-800 p-5 rounded-xl border border-slate-700">
+                    <div class="text-red-400 text-xl font-bold mb-1">VW_BI_SECURITY_DENIALS</div>
+                    <p class="text-xs text-slate-400">Exposes denial rates and audit trail metrics for security compliance monitoring.</p>
+                </div>
+            </div>
+            <div class="speaker-note hidden mt-6 p-4 bg-amber-950/40 border border-amber-500/30 text-amber-200 text-sm rounded-lg">
+                <strong>💡 Speaker Notes:</strong> Reporting tools should never run raw aggregation queries directly against production transactional tables. Power BI connects exclusively to optimized database views (VW_BI_*), preventing locks.
+            </div>
+        </section>
+
+        <!-- SLIDE 8 -->
+        <section class="slide flex-col max-w-5xl w-full">
+            <h2 class="text-3xl font-bold text-white mb-2">Live System Demonstration Runbook</h2>
+            <p class="text-slate-400 mb-6">4-step live execution plan for the defense evaluation panel.</p>
+            <div class="bg-slate-800 p-6 rounded-xl border border-slate-700 space-y-4">
+                <div class="flex items-center space-x-4">
+                    <span class="bg-blue-600 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold text-sm">1</span>
+                    <div>
+                        <p class="font-bold text-sm text-slate-200">Schema Validation Check</p>
+                        <p class="text-xs text-slate-400">Verify <code>USER_OBJECTS</code> to prove all packages, triggers, and views are <code>VALID</code>.</p>
+                    </div>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <span class="bg-purple-600 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold text-sm">2</span>
+                    <div>
+                        <p class="font-bold text-sm text-slate-200">Order Execution & Stock Auto-Deduction</p>
+                        <p class="text-xs text-slate-400">Execute <code>ECOMM_ORDER_PKG.place_order</code> and query <code>INVENTORY</code> stock decrement live.</p>
+                    </div>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <span class="bg-red-600 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold text-sm">3</span>
+                    <div>
+                        <p class="font-bold text-sm text-slate-200">Autonomous Security Test</p>
+                        <p class="text-xs text-slate-400">Simulate policy check and query <code>AUDIT_LOG</code> to demonstrate autonomous log entry creation.</p>
+                    </div>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <span class="bg-emerald-600 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold text-sm">4</span>
+                    <div>
+                        <p class="font-bold text-sm text-slate-200">Power BI View Verification</p>
+                        <p class="text-xs text-slate-400">Execute select queries on <code>VW_BI_SALES_OVERVIEW</code> and <code>VW_BI_SECURITY_DENIALS</code>.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="speaker-note hidden mt-6 p-4 bg-amber-950/40 border border-amber-500/30 text-amber-200 text-sm rounded-lg">
+                <strong>💡 Speaker Notes:</strong> Let us now switch to SQL*Plus to run these workflows live and inspect the audit log results directly.
+            </div>
+        </section>
+
+        <!-- SLIDE 9 -->
+        <section class="slide flex-col max-w-5xl w-full">
+            <h2 class="text-3xl font-bold text-white mb-2">Technical Evaluation & Defense Summary</h2>
+            <p class="text-slate-400 mb-6">Summary of architectural objectives versus completed results.</p>
+            <div class="overflow-x-auto">
+                <table class="w-full text-left text-xs text-slate-300 border-collapse">
+                    <thead>
+                        <tr class="bg-slate-800 text-slate-400 uppercase">
+                            <th class="p-3 border border-slate-700">Layer</th>
+                            <th class="p-3 border border-slate-700">Objective</th>
+                            <th class="p-3 border border-slate-700">Implementation</th>
+                            <th class="p-3 border border-slate-700">Verified Result</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="border border-slate-700">
+                            <td class="p-3 font-bold text-blue-400">Data Integrity</td>
+                            <td class="p-3">Zero invalid prices/stock</td>
+                            <td class="p-3">Check constraints & row triggers</td>
+                            <td class="p-3 text-emerald-400">100% Protection</td>
+                        </tr>
+                        <tr class="border border-slate-700">
+                            <td class="p-3 font-bold text-red-400">Security</td>
+                            <td class="p-3">Block off-hours DML</td>
+                            <td class="p-3"><code>ECOMM_SECURITY_PKG</code></td>
+                            <td class="p-3 text-emerald-400">Custom ORA-20001 Exception</td>
+                        </tr>
+                        <tr class="border border-slate-700">
+                            <td class="p-3 font-bold text-purple-400">Auditing</td>
+                            <td class="p-3">Non-repudiable log preservation</td>
+                            <td class="p-3"><code>PRAGMA AUTONOMOUS_TRANSACTION</code></td>
+                            <td class="p-3 text-emerald-400">Independent AUDIT_LOG commits</td>
+                        </tr>
+                        <tr class="border border-slate-700">
+                            <td class="p-3 font-bold text-amber-400">Analytics</td>
+                            <td class="p-3">Real-time Power BI reporting</td>
+                            <td class="p-3">Decoupled <code>VW_BI_*</code> Views</td>
+                            <td class="p-3 text-emerald-400">Direct Dashboard Mapping</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="speaker-note hidden mt-6 p-4 bg-amber-950/40 border border-amber-500/30 text-amber-200 text-sm rounded-lg">
+                <strong>💡 Speaker Notes:</strong> In summary, this project transforms the Oracle database from a passive storage layer into an active, self-defending enterprise platform.
+            </div>
+        </section>
+
+        <!-- SLIDE 10 -->
+        <section class="slide flex-col items-center justify-center text-center max-w-4xl w-full">
+            <div class="inline-block p-4 bg-emerald-600/10 border border-emerald-500/20 rounded-full mb-6 text-emerald-400 text-3xl">
+                <i class="fa-solid fa-circle-check"></i>
+            </div>
+            <h1 class="text-4xl font-extrabold text-white mb-4">Thank You!</h1>
+            <p class="text-lg text-slate-300 mb-6">Questions & Panel Discussion</p>
+            <div class="bg-slate-800 border border-slate-700 p-6 rounded-xl text-left max-w-md w-full text-xs text-slate-300 space-y-2">
+                <p><strong>Presenter:</strong> Izihirwe-Majibu-Amicus</p>
+                <p><strong>Faculty:</strong> Computing & Information Sciences (UNILAK)</p>
+                <p><strong>Repository Status:</strong> Phase 1–8 Verified & Committed</p>
+            </div>
+            <div class="speaker-note hidden mt-6 p-4 bg-amber-950/40 border border-amber-500/30 text-amber-200 text-sm rounded-lg text-left w-full">
+                <strong>💡 Speaker Notes:</strong> Thank you for your time and guidance. I am now open to your questions, feedback, and technical code inspection.
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Bottom Navigation Controls -->
+    <footer class="bg-slate-800 border-t border-slate-700 px-6 py-4 flex justify-between items-center">
+        <button id="toggle-notes-btn" onclick="toggleNotes()" class="bg-slate-700 hover:bg-slate-600 text-slate-200 text-xs px-3 py-2 rounded flex items-center space-x-2">
+            <i class="fa-solid fa-note-sticky"></i>
+            <span>Toggle Speaker Notes</span>
+        </button>
+        <div class="space-x-3">
+            <button onclick="prevSlide()" class="bg-slate-700 hover:bg-slate-600 text-white px-4 py-2 rounded text-sm"><i class="fa-solid fa-chevron-left mr-1"></i> Prev</button>
+            <button onclick="nextSlide()" class="bg-red-600 hover:bg-red-500 text-white px-4 py-2 rounded text-sm font-semibold">Next <i class="fa-solid fa-chevron-right ml-1"></i></button>
+        </div>
+    </footer>
+
+    <!-- Interactive Navigation Logic -->
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        const totalSlides = slides.length;
+
+        function updateSlide() {
+            slides.forEach((s, idx) => {
+                s.classList.toggle('active', idx === currentSlide);
+            });
+            document.getElementById('current-slide-num').innerText = currentSlide + 1;
+        }
+
+        function nextSlide() {
+            if (currentSlide < totalSlides - 1) {
+                currentSlide++;
+                updateSlide();
+            }
+        }
+
+        function prevSlide() {
+            if (currentSlide > 0) {
+                currentSlide--;
+                updateSlide();
+            }
+        }
+
+        function toggleNotes() {
+            const notes = document.querySelectorAll('.speaker-note');
+            notes.forEach(n => n.classList.toggle('hidden'));
+        }
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowRight' || e.key === 'Space') nextSlide();
+            if (e.key === 'ArrowLeft') prevSlide();
+        });
+    </script>
+</body>
+</html>
